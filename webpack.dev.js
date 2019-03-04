@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,7 +14,6 @@ module.exports = {
     inline: true
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: './src/pug/index.pug'
     }),
@@ -50,11 +48,16 @@ module.exports = {
       {
         test: /\.pug$/,
         use: [
-          'pug-loader'
+          {
+            loader: 'pug-loader',
+            options: {
+              pretty: true
+            }
+          }
         ]
       },
       {
-        test: /\.s?(a|c)ss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
             "style-loader",
             "css-loader",

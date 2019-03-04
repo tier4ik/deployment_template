@@ -1,5 +1,5 @@
-$(function() {
-  $('h1').on('click', function() {
-    alert('CLICK!')
-  })
+$(()=>{
+  setTimeout(()=>{
+    alert('TEMPLATE IS WORKING')
+  }, 1000)
 })

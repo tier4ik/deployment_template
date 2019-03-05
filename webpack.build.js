@@ -28,11 +28,16 @@ module.exports = {
     filename: 'scripts/[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   module: {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /(node_modules)/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {

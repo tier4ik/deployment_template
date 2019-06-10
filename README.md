@@ -1,5 +1,5 @@
 # project_template
-The "project template" helps you to run your workspace fast and ease !
+The "project template" helps you to run your workspace fast and easy !
 
 ## Template includes:
 

@@ -11,6 +11,15 @@ The "project template" helps you to run your workspace fast and easy !
 - autoprefixer
 - reset-css
 
+### Delete version history
+```sh
+  rm -rf .git
+```
+### Initialize your own git repository
+```sh
+  git init
+```
+
 ## Scripts:
 
   ### start a dev-server: 
